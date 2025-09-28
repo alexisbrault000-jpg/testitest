@@ -1,0 +1,167 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: Arial, sans-serif;
+  background: url("/assets/img/background_img.png") no-repeat center top;
+  background-size: 100% auto; /* prend toute la largeur, garde la hauteur */
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* 📱 Version mobile */
+@media (max-width: 768px) {
+  body {
+    background: url("/assets/img/background_img_mobile.png") no-repeat center top;
+    background-size: 100% auto; /* même effet que sur desktop */
+  }
+}
+/* HEADER */
+.site-header {
+  background: #1A2C63;
+  text-align: center;
+  padding: 15px;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+/* SOCIAL GRID */
+.social-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.social-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes fixes */
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(26, 44, 99, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-btn img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+/* Instagram prend toute la largeur (2 colonnes) */
+.social-btn.wide {
+  grid-column: span 2;
+}
+
+/* Hover effet */
+.social-btn:hover {
+  transform: translateY(-4px);
+  background-color: rgba(26, 44, 99, 1);
+}
+
+
+/* ABOUT */
+.about {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #1A2C63;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #ff3333;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 10vh;
+  }
+  .hero-overlay h1 {
+    font-size: 1.6rem;
+  }
+}
